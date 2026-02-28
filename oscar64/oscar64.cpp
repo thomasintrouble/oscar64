@@ -537,7 +537,7 @@ int main2(int argc, const char** argv)
 		}
 		else if (!strcmp(targetMachine, "mega65"))
 		{
-			strcpy_s(basicStart, "0x2001");		
+			strcpy_s(basicStart, "0x2001");
 			compiler->mTargetMachine = TMACH_MEGA65;
 			compiler->AddDefine(Ident::Unique("__MEGA65__"), "1");
 		}
@@ -955,7 +955,7 @@ int main(int argc, const char** argv)
 #ifdef _WIN32
 #ifndef __GNUC__
 #ifndef _DEBUG
-	__try 
+	__try
 	{
 #endif
 #endif
