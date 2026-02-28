@@ -131,6 +131,9 @@ __asm bsinit
 	lda #147
 	jmp $ffd2	
 }
+#elif defined(__BBC__)
+#define bsout   0xffe3 : a->a
+
 #elif defined(__CBMPET__)
 #define bsout	0xffd2 : a->a
 #define bsin	0xffe4
