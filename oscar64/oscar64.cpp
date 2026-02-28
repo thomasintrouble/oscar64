@@ -493,6 +493,13 @@ int main2(int argc, const char** argv)
 			compiler->AddDefine(Ident::Unique("__VIC20__"), "1");
 			compiler->AddDefine(Ident::Unique("__CBM__"), "1");
 		}
+		else if (!strcmp(targetMachine, "bbc"))
+		{
+			strcpy_s(basicStart, "0x1201");
+			compiler->mTargetMachine = TMACH_BBC;
+			compiler->AddDefine(Ident::Unique("__BBC__"), "1");
+			compiler->AddDefine(Ident::Unique("__ACORN__"), "1");
+		}
 		else if (!strcmp(targetMachine, "vic20+24"))
 		{
 			strcpy_s(basicStart, "0x1201");
